@@ -1,0 +1,304 @@
+/*Header*/
+.header {
+  padding: 15px;
+  text-align: center;
+  background-image: url("../pictures/header.jpg"); padding-top: 50px; background-repeat: no-repeat; background-size: cover; 
+}
+
+.header
+  p {
+  font-size: 24px;
+  color:white;
+  padding-top: 5px;
+}
+/*End - Header*/
+
+
+/*Navigation bar */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav {
+  overflow: hidden;
+  background-color: #006bb3;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 50px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #e0e0eb;
+  color: black;
+}
+
+
+.active {
+   background-color: #e0e0eb;
+  color: black;
+}
+/*End - Navigation bar */
+
+
+/*Body*/
+body {
+  font-family: Arial;
+  font-size: 16px;
+  padding: 150px;
+  background-color:#ffe6ff;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #e0e0eb;
+  padding: 20px;
+   padding-top: 12px;
+}
+
+.book {
+ border-radius: 5px;
+  column-count: 2;
+  column-gap: 20px;
+  background-color: #e0e0eb;
+   padding: 37px;
+   padding-top: 12px;
+}
+
+.quickimage {
+	height:200px; 
+	width:300px; 
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+.vegimage{
+	width:220px;
+	height:180px;
+}
+/*End - Body*/
+
+
+/*Footer*/
+footer {
+  padding: 10px;
+  text-align: center;
+  background: #006bb3;
+  margin-top: 10px;
+   border-radius: 5px;
+   font-size:14px;
+}
+/*End - Footer*/
+
+
+/*Forms*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=tel], select, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #33cc33;
+  color: white;
+  padding: 14px 23px;
+  border: none;
+  border-radius: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #04AA6D;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 14px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 14px;
+  background-color: #f44336;
+}
+
+.cancelbtn, .singupbtn {
+  float: center;
+  width: 7%;
+  border-radius: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*End - Forms*/
+
+
+/* Buy the products here - stock, box-containers, boxes, reduction, cost, amount & addtobasket  */
+.stock .box-containers{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stock .box-containers .boxes{
+  flex:5 1 19rem;
+  text-align: center;
+  padding:2rem;
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.stock .box-containers .boxes img{
+  height: 9rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.stock .box-containers .boxes .reduction{
+  position: absolute;
+  top:1rem; left: 1rem;
+  background:#ffff00;
+  padding:.7rem 1rem;
+  font-size: 1.6rem;
+}
+
+.stock .box-containers .boxes h3{
+
+  font-size: 1.4rem;
+}
+
+.stock .box-containers .boxes .cost{
+  font-size: 1.4rem;
+  color:black;
+  padding:.5rem 0;
+}
+
+.stock .box-containers .boxes .cost span{
+  font-size: 1.2rem;
+  color:red;
+  text-decoration: line-through;
+}
+
+.stock .box-containers .boxes .amount{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.stock .box-containers .boxes .amount span{
+  padding: .7rem;
+  font-size: 1rem;
+}
+
+.stock .box-containers .boxes .amount input{
+  border:.1rem solid rgba(0,0,0,.3);
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding:.4rem;
+  background:rgba(0,0,0,.07);
+}
+
+.addtobasket{
+  display: inline-block;
+  margin-top: 1rem;
+  color:blue;
+  font-size: 1.3rem;
+  text-align: center;
+}
+/* End - Buy the products here*/
+
+
+
+/*Home*/
+.latest-recipes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.latest-recipes h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.latest-recipes article {
+  flex: 1 1 300px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.latest-recipes article:last-child {
+  margin-right: 0;
+}
+
+.latest-recipes img {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.latest-recipes h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.latest-recipes p {
+  margin-bottom: 1rem;
+}
+
+.latest-recipes a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.latest-recipes a:hover {
+  background-color: #006bb3;
+}
+
+.home{
+height:368px; 
+	width:380px; 
+}
+
+/*End- Home*/
