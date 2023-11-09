@@ -1,6 +1,8 @@
 body {
-	    font-family: Arial, sans-serif;
+	    font-family: Arial;
+	    background-color: salmon;
 }
+
 
 h1, h2 {
 	color: #333;
@@ -13,11 +15,5 @@ ul {
 
 li {
 	margin-bottom: 10px;
-}
-
-a {
-       text-decoration: none;
-       color: #007BFF;
-        margin-left: 10px;
 }
 
