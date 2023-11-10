@@ -1,6 +1,6 @@
 body {
 	font-family: Arial, sans-serif;
-	background-color: salmon;
+	background-color: #FECEE9;
 	margin:0
 }
 
@@ -44,11 +44,11 @@ section.intro {
 
 
 h1 {
-	color: #333;
+	color: black;
 }
 
 h2 {
-	color: #555;
+	color: black;
 }
 
 
@@ -71,7 +71,14 @@ form {
 	padding: 10px;
 	background-color: white;
 	border-radius: 10px;
+	text-align: center;
+
 }
+
+.basket-heading {
+	color: black;
+}
+
 
 .item-name {
 	margin-right: 10px;
