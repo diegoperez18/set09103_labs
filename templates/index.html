@@ -7,25 +7,67 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-<h1> Product catalog </h1>
+<nav>
+	<ul>
+	    <li><a href="{{ url_for('fruits') }}">Fruits</a></li>
+            <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
+	</ul>
+</nav>
+
+<section class="intro">
+	<h1>Welcome to our E-Commerce Web App</h1>
+        <p>An e-commerce web app dedicated to the sale of food products online. Non-food items, such as clothes, 
+	furniture, or medications, will not be offered through this web app. We focus on delivering your groceries
+	to your doorstep with a concise catalog of high-quality options.</p>
+	<p><strong>1. Dedicated to Your Groceries:</strong> Unlike other e-commerce platforms, we specialize exclusively in food products...</p>
+
+	<p><strong>2. Concise Catalog:</strong> We unde valuable. That's why we've carefully crafted a concise catalog...</p>
+
+        <p><strong>3. Quality Assurance:</strong> At [Your E-commerce Platform Name], quality is our top priority...</p>
+
+	<p><strong>4. User-Friendly Interface:</strong> Our web app is designed to be user-friendly, making your online shopping experience a breeze...</p>
+
+	<p><strong>5. Enjoy the convenience of having your groceries delivered straight to your doorstep...</p>
+
+        <p><strong>6. Secure and Convenient Payment Options:</strong> We prioritize your security and convenience...</p>
+
+	<p><strong>7. Personalized Recommendations:</strong> Our platform learns from your preferences...</p>
+
+</section>
+
+
+<h2> Product catalogue</h2>
 
 <ul>		
 <li>
 	<strong>Sugar</strong>
-	<span>1.88£</span>
-	<form action="{{ url_for('add_to_basket', item='sugar') }}" method="POST">
+	<span>2.00£</span>
+	<form action="{{ url_for('add_to_basket', item='Sugar', price=2.0) }}" method="POST">
 		<button type="submit">Add to basket</button>
+	</form>
+	<strong>Onion</strong>
+	<span>4.00£</span>
+        <form action="{{ url_for('add_to_basket', item='Onion', price=4.0) }}" method="POST">
+		<button type="submit">Add to basket</button>  
 	</form>
 		</li>
 	
 	</ul>
 
-	<h2>Shopping baskte</h2>
-	<ul>
-	
-		{% for item in basket %}
-		<li>{{ item }}</li>
+	<h2>Shopping Basket</h2>
+	<ul id="basket-list">
+	{% for item, price in basket %}
+	<li>
+		<span class="item-name">{{ item }}</span>
+		<span class="item-price">{{ price }}£</span>
+	        <form action="{{ url_for('remove_from_basket', item=item) }}" method="POST">
+		<button type="submit">Remove</button>
+
+		</form>
+	</li>
+
 		{% endfor %}
+		<li id ="total"> Total: {{ total_price }}£</li>
 		
 	</ul>
 </body>
