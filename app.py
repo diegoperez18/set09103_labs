@@ -31,7 +31,7 @@ def fruits():
 
 @app.route('/drinks', endpoint='drinks')
 def drinks():
-   
+
    return render_template('drinks.html')
 
 if __name__ == '__main__':
