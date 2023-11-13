@@ -48,8 +48,9 @@ h1 {
 	color: black;
 }
 
-h2 {
+h2.product-catalogue-heading {
 	color: black;
+	margin-left: 20px;
 }
 
 
@@ -78,6 +79,10 @@ form {
 
 .basket-heading {
 	color: black;
+}
+
+#product-catalogue-description {
+	margin-left: 20px;
 }
 
 
@@ -111,3 +116,14 @@ form {
 	height: auto;
 	border-radius: 5px;
 }
+
+.product-item button {
+	background-color: green;
+	color: white;
+	padding: 8px 12px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+

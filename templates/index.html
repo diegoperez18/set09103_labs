@@ -36,10 +36,12 @@
 </section>
 
 
-<h2> Product catalogue</h2>
 
+<h2 class="product-catalogue-heading"> Product catalogue</h2>
+<p id="product-catalogue-description"> Take a look at our best-sellers below—these are the food products everyone's loving right now. From snacks to kitchen essentials, these items have proven to be real crowd-pleasers. Explore the top picks and discover why these products are flying off the shelves</p>
 <div class="product-container">
-     <div class="product-item">
+	
+	<div class="product-item">
 		<img src="{{ url_for('static', filename='img/sugar.png') }}" alt="Sugar">
 	<strong>Sugar</strong>
 	<span>1.00£</span>
@@ -50,13 +52,13 @@
 
 
 	<div class="product-item">
-		<img src="{{ url_for('static', filename='img/sushi.png') }}" alt="Sugar">
+		<img src="{{ url_for('static', filename='img/sushi.png') }}" alt="Sushi">
 		<strong>Sushi</strong>
 		<span>4.00£</span>
 		<form action="{{ url_for('add_to_basket', item='Sugar', price=4.0) }}" method="POST">
 			<button type="submit">Add to basket</button>
 		</form>
-	</div>	
+	</div>
 
 
      <div class="product-item">
