@@ -40,7 +40,7 @@
 
 <div class="product-container">
      <div class="product-item">
-		<img src="{{ url_for('static', filename='img/sugar.jpg') }}" alt="Sugar">
+		<img src="{{ url_for('static', filename='img/sugar.png') }}" alt="Sugar">
 	<strong>Sugar</strong>
 	<span>2.00£</span>
 	<form action="{{ url_for('add_to_basket', item='Sugar', price=2.0) }}" method="POST">
@@ -49,8 +49,8 @@
      </div>
 
      <div class="product-item">
-	     <img src="{{ url_for('static', filename='img/onion.jpg') }}" alt="Onion">
-	<strong>Onion</strong>
+	     <img src="{{ url_for('static', filename='img/bread.png') }}" alt="Onion">
+	<strong>Bread</strong>
 	<span>4.00£</span>
         <form action="{{ url_for('add_to_basket', item='Onion', price=4.0) }}" method="POST">
 		<button type="submit">Add to basket</button>  
