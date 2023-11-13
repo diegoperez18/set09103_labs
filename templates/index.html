@@ -52,20 +52,20 @@
 
 
 	<div class="product-item">
-		<img src="{{ url_for('static', filename='img/sushi.png') }}" alt="Sushi">
-		<strong>Sushi</strong>
-		<span>4.00£</span>
-		<form action="{{ url_for('add_to_basket', item='Sugar', price=4.0) }}" method="POST">
-			<button type="submit">Add to basket</button>
+		<img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple">
+	    <strong>Apple</strong>
+	    <span>1.00£</span>
+	    <form action="{{ url_for('add_to_basket', item='Apple', price=1.0) }}" method="POST">
+	            <button type="submit">Add to basket</button>
 		</form>
 	</div>
 
 
      <div class="product-item">
-	     <img src="{{ url_for('static', filename='img/bread.png') }}" alt="Onion">
+	     <img src="{{ url_for('static', filename='img/bread.png') }}" alt="Bread">
 	<strong>Bread</strong>
 	<span>2.00£</span>
-        <form action="{{ url_for('add_to_basket', item='Onion', price=2.0) }}" method="POST">
+        <form action="{{ url_for('add_to_basket', item='Bread', price=2.0) }}" method="POST">
 		<button type="submit">Add to basket</button>  
 	</form>
 	</div>
@@ -78,7 +78,7 @@
 		<span class="item-name">{{ item }}</span>
 		<span class="item-price">{{ price }}£</span>
 		<form action="{{ url_for('remove_from_basket', item=item) }}" method="POST">
-			<button type="submit">Remove</button>
+			<button class="remove-button" type="submit">Remove</button>
 
 		</form>
 	</li>

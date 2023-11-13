@@ -117,7 +117,7 @@ form {
 	border-radius: 5px;
 }
 
-.product-item button {
+.product-item button, #basket-list li button { 
 	background-color: green;
 	color: white;
 	padding: 8px 12px;
@@ -127,3 +127,8 @@ form {
 	margin-top: 5px;
 }
 
+#basket-list li button {
+	background-color: red;
+
+
+}
