@@ -35,15 +35,21 @@ def remove_from_basket(item):
     return render_template('index.html', basket=basket, total_price=total_price)
 
 
-@app.route('/fruits', endpoint='fruits')
-def fruits():
+@app.route('/fresh', endpoint='fresh')
+def fresh():
 
-    return render_template('fruits.html')
+    return render_template('fresh.html')
 
-@app.route('/drinks', endpoint='drinks')
-def drinks():
+@app.route('/delivery', endpoint='delivery')
+def delivery():
 
-   return render_template('drinks.html')
+   return render_template('delivery.html')
+
+@app.route('/cart', endpoint='cart')
+def cart():
+
+    return render_template('cart.html')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
