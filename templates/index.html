@@ -74,11 +74,12 @@
 	
 	<ul id="basket-list">
 		<h2 class="basket-heading">Shopping Basket</h2>
-	{% for item, price in basket%}
+		{% for item_dict in basket %}
 	<li>
-		<span class="item-name">{{ item }}</span>
-		<span class="item-price">{{ price }}£</span>
-		<form action="{{ url_for('remove_from_basket', item=item) }}" method="POST">
+		<span class="item-quantity">x{{ item_dict['quantity'] }}</span>
+		<span class="item-name">{{ item_dict['item'] }}</span>
+		<span class="item-price">{{ item_dict['total_price'] }}£</span>
+		<form action="{{ url_for('remove_from_basket', item=item_dict['item']) }}" method="POST">
 			<button class="remove-button" type="submit">Remove</button>
 
 		</form>

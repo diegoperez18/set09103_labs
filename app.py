@@ -6,23 +6,34 @@ basket = []
 
 @app.route('/')
 def root():
-    total_price = sum([price for _, price in basket])
+    total_price = sum([item['price'] * item['quantity'] for item in basket])
     return render_template('index.html', basket=basket, total_price=total_price)
 
 @app.route('/add_to_basket/<item>/<float:price>', methods=['POST'])
 def add_to_basket(item, price):
-    basket.append((item, price))
-    total_price = sum([price for _, price in basket])
+    for item_dict in basket:
+        if item_dict['item'] == item:
+            item_dict['quantity'] += 1
+            item_dict['total_price'] = item_dict['price'] * item_dict['quantity']
+            break
+    else:
+        basket.append({'item': item, 'price': float(price), 'quantity': 1, 'total_price': float(price)})
+    total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
     return render_template('index.html', basket=basket, total_price=total_price)
 
 @app.route('/remove_from_basket/<item>', methods=['POST'], endpoint='remove_from_basket')
 def remove_from_basket(item):
-    for i, (basket_item, _) in enumerate(basket):
-        if basket_item == item:
-            del basket[i]
+    for item_dict in basket:
+        if item_dict['item'] == item:
+            if item_dict['quantity'] > 1:
+                item_dict['quantity'] -= 1
+                item_dict['total_price'] = item_dict['price'] * item_dict['quantity']
+            else:
+                basket.remove(item_dict)
             break
-    total_price = sum([price for _, price in basket])
-    return render_template('index.html', basket=basket or [], total_price=total_price)
+    total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
+    return render_template('index.html', basket=basket, total_price=total_price)
+
 
 @app.route('/fruits', endpoint='fruits')
 def fruits():
