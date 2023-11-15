@@ -10,6 +10,7 @@
 	<h1 id="title">E-FeastFiesta </h1>
 <nav>
 	<ul>
+	    <li><a href="{{ url_for('root') }}">Home</a></li>
 	    <li><a href="{{ url_for('fresh') }}">Fresh Food</a></li>
             <li><a href="{{ url_for('delivery') }}">Delivery</a></li>
 	    <li><a href="{{ url_for('cart') }}">Basket</a></li>
@@ -38,7 +39,7 @@
 </section>
 
 
-
+<section class="intro">
 <h2 class="product-catalogue-heading"> Product catalogue</h2>
 <p id="product-catalogue-description"> Take a look at our best-sellers below—these are the food products everyone's loving right now. From snacks to kitchen essentials, these items have proven to be real crowd-pleasers. Explore the top picks and discover why these products are flying off the shelves</p>
 <div class="product-container">
@@ -63,10 +64,10 @@
 	</div>
 
 	<div class="product-item">
-		<img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple">
-		<strong>Apple</strong>
+		<img src="{{ url_for('static', filename='img/mango.png') }}" alt="Mango">
+		<strong>Mango</strong>
 		<span>1.00£</span>
-		<form action="{{ url_for('add_to_basket', item='Apple', price=1.0) }}" method="POST">
+		<form action="{{ url_for('add_to_basket', item='mango', price=2.0) }}" method="POST">
 			<button type="submit">Add to basket</button>
 		</form>
 	</div>
@@ -77,11 +78,12 @@
 	<strong>Bread</strong>
 	<span class="discounted-price">2.00£</span>
 	<span>1.00£</span>
-        <form action="{{ url_for('add_to_basket', item='Bread', price=2.0) }}" method="POST">
+        <form action="{{ url_for('add_to_basket', item='Bread', price=1.0) }}" method="POST">
 		<button type="submit">Add to basket</button>  
 	</form>
 	</div>
 </div>
+</section>
 	
 	<ul id="basket-list">
 		<h2 class="basket-heading">Shopping Basket</h2>

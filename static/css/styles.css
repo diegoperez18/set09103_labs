@@ -1,6 +1,6 @@
 body {
 	font-family: Arial, sans-serif;
-	background-color: #FECEE9;
+	background-color: #ffe6ff;
 	margin: 0 auto;
 	max-width: 1600px;
 	padding: 20px;
@@ -8,7 +8,7 @@ body {
 
 
 nav {
-	background-color: #333;
+	background-color: #006bb3;
 	height:45px;	
     }
 
@@ -34,14 +34,14 @@ nav li a{
 }
 
 nav li a:hover {
-	    background-color: #555; 
+	    background-color: #e0e0eb; 
 }
 
 section.intro {
 	max-width: 1600px;
 	margin: 20px auto;
 	padding: 20px;
-	background-color: white;
+	background-color: #e0e0eb;
 	border-radius: 10px;
 }
 
@@ -80,7 +80,7 @@ form {
 	max-width: 400px;
 	margin: 20px auto;
 	padding: 10px;
-	background-color: white;
+	background-color: #e0e0eb;
 	border-radius: 10px;
 	text-align: center;
 
@@ -140,8 +140,9 @@ form {
 }
 
 .product-item img {
-	max-width: 100%;
-	height: auto;
+	width: 200px;
+	height: 150px;
+	object-fit: contain;
 	border-radius: 5px;
 }
 
