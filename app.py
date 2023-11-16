@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, make_response
 
 app = Flask(__name__)
 
@@ -19,7 +19,12 @@ def add_to_basket(item, price):
     else:
         basket.append({'item': item, 'price': float(price), 'quantity': 1, 'total_price': float(price)})
     total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
-    return render_template('index.html', basket=basket, total_price=total_price)
+
+    #response = make_response()
+    #response.headers['Refresh'] = '1;url=/'
+    #return response
+
+    return render_template('fresh.html', basket=basket, total_price=total_price)
 
 @app.route('/remove_from_basket/<item>', methods=['POST'], endpoint='remove_from_basket')
 def remove_from_basket(item):
@@ -32,7 +37,7 @@ def remove_from_basket(item):
                 basket.remove(item_dict)
             break
     total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
-    return render_template('index.html', basket=basket, total_price=total_price)
+    return render_template('cart.html', basket=basket, total_price=total_price)
 
 
 @app.route('/fresh', endpoint='fresh')
@@ -48,7 +53,7 @@ def delivery():
 @app.route('/cart', endpoint='cart')
 def cart():
 
-    return render_template('cart.html')
+    return render_template('cart.html', basket=basket)
 
 
 if __name__ == '__main__':

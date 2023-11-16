@@ -47,7 +47,7 @@
 	<div class="product-item">
 		<img src="{{ url_for('static', filename='img/sugar.png') }}" onmouseover="displaySugars(this)" onmouseout="displaySugar(this)">
 	<strong>Sugar</strong>
-	<span>1.00£</span>
+	<span>£1.00</span>
 	<form action="{{ url_for('add_to_basket', item='Sugar', price=1.0) }}" method="POST">
 		<button type="submit">Add to basket</button>
 	</form>
@@ -57,7 +57,7 @@
 	<div class="product-item">
 		<img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple">
 	    <strong>Apple</strong>
-	    <span>1.00£</span>
+	    <span>£1.00</span>
 	    <form action="{{ url_for('add_to_basket', item='Apple', price=1.0) }}" method="POST">
 	            <button type="submit">Add to basket</button>
 		</form>
@@ -66,43 +66,23 @@
 	<div class="product-item">
 		<img src="{{ url_for('static', filename='img/mango.png') }}" alt="Mango">
 		<strong>Mango</strong>
-		<span>1.00£</span>
+		<span>£1.00</span>
 		<form action="{{ url_for('add_to_basket', item='Mango', price=1.0) }}" method="POST">
 			<button type="submit">Add to basket</button>
 		</form>
-	</div>
-		    
+	</div>  
 
      <div class="product-item">
 	     <img src="{{ url_for('static', filename='img/bread.png') }}" alt="Bread">
 	<strong>Bread</strong>
-        <span class="discounted-price">2.00£</span>
-	<span>1.00£</span>
+        <span class="discounted-price">£2.00</span>
+	<span>£1.00</span>
         <form action="{{ url_for('add_to_basket', item='Bread', price=1.0) }}" method="POST">
 		<button type="submit">Add to basket</button>  
 	</form>
 	</div>
 </div>
 </section>
-
-	
-	<ul id="basket-list">
-		<h2 class="basket-heading">Shopping Basket</h2>
-		{% for item_dict in basket %}
-	<li>
-		<span class="item-quantity">x{{ item_dict['quantity'] }}</span>
-		<span class="item-name">{{ item_dict['item'] }}</span>
-		<span class="item-price">{{ item_dict['total_price'] }}£</span>
-		<form action="{{ url_for('remove_from_basket', item=item_dict['item']) }}" method="POST">
-			<button class="remove-button" type="submit">Remove</button>
-
-		</form>
-	</li>
-
-		{% endfor %}
-		<li id ="total"> Total: {{ total_price }}£</li>
-		
-	</ul>
 
 	<footer>
 		<h4>Copyright © 2023 E-FeastFiesta All Rights Reserved.</h4>
