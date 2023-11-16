@@ -15,3 +15,21 @@ function displayBread(myimage) {
 	        myimage.src = "../../static/img/bread.png";
 }
 
+function displayCherrytwo(myimage) {
+	myimage.src="../../static/img/cherry2.png";
+}
+
+function displayCherry(myimage) {
+	myimage.src="../../static/img/cherry.png";
+}
+
+function displayOniontwo(myimage) {
+	myimage.src="../../static/img/onion2.png";
+}
+
+function displayOnion(myimage) {
+	myimage.src="../../static/img/onion.png";
+}
+
+
+

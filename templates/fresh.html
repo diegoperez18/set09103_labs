@@ -76,7 +76,7 @@
 		</div>
 
 		<div class="product-item">
-			<img src="{{ url_for('static', filename='img/cherry.png') }}" alt="Cherry">
+			<img src="{{ url_for('static', filename='img/cherry.png') }}"  onmouseover="displayCherrytwo(this)" onmouseout="displayCherry(this)">
 			<strong>Cherries</strong>
 			<span>£0.75</span>
 			<form action="{{ url_for('add_to_basket', item='Cherries', price=0.75) }}" method="POST">
@@ -129,7 +129,7 @@
 		</div>
 
 		<div class="product-item">
-			<img src="{{ url_for('static', filename='img/onion.png') }}" alt="Onion">
+			<img src="{{ url_for('static', filename='img/onion.png') }}" onmouseover="displayOniontwo(this)" onmouseout="displayOnion(this)">
 			<strong>Onion</strong>
 			<span>£0.75</span>
 			<form action="{{ url_for('add_to_basket', item='Onion', price=0.75) }}" method="POST">
