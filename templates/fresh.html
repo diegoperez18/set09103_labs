@@ -1,1 +1,65 @@
-<p> Fresh food here </p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UFT-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>E-Commerce Web App</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	</head>
+	<body>
+		<h1 id="title">E-FeastFiesta </h1>
+
+<nav>
+	<ul>
+		<li><a href="{{ url_for('root') }}">Home</a></li>
+		<li><a href="{{ url_for('fresh') }}">Fresh Food</a></li>
+		<li><a href="{{ url_for('delivery') }}">Delivery</a></li>
+		<li><a href="{{ url_for('cart') }}">Basket</a></li>
+	</ul>
+</nav>
+
+<section class="intro">
+	<h2 class="product-catalogue-heading"> Product catalogue</h2>
+	<p id="product-catalogue-description">
+	In our catalog, you can easily discover a vibrant array of fresh produce meticulously curated to meet your culinary needs. From crisp, locally sourced fruits and vegetables to organic greens and seasonal delights, our collection is a testament to quality and freshness. Explore our catalog to embark on a journey of culinary inspiration, where each item is carefully selected to ensure you have access to the finest and freshest ingredients for your kitchen</p>
+	<div class="product-container">
+
+		<div class="product-item">
+			<img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple">
+			<strong>Apple</strong>
+			<span>1.00£</span>
+			<form action="{{ url_for('add_to_basket', item='Apple', price=1.0) }}" method="POST">
+				<button type="submit">Add to basket</button>
+			</form>
+		</div>
+
+		<div class="product-item">
+			<img src="{{ url_for('static', filename='img/mango.png') }}" alt="Mango">
+			<strong>Mango</strong>
+			<span>1.00£</span>
+			<form action="{{ url_for('add_to_basket', item='Mango', price=2.0) }}" method="POST">
+				<button type="submit">Add to basket</button>
+			</form>
+		</div>
+
+		<div class="product-item">
+			<img src="{{ url_for('static', filename='img/bread.png') }}" alt="Bread">
+			<strong>Bread</strong>
+			<span class="discounted-price">2.00£</span>
+				<span>1.00£</span>
+				<form action="{{ url_for('add_to_basket', item='Bread', price=1.0) }}" method="POST">
+					<button type="submit">Add to basket</button>  
+				</form>
+		</div>
+</section>
+
+<footer>
+	<h4>Copyright © 2023 E-FeastFiesta All Rights Reserved.</h4>
+	<p> Thevided on this website does not, and is not intended to, constitute legal advice;
+	instead, all i materials available on this site are for general informational purposes only.
+	Readers of this website should contact their attorney to obtain advice with respect to any
+	particular legal matter.  No reader, user, or browser of this site should act or refrain from acting
+	on the basis of information on this site without first seeking legal he relevant jurisdiction<p>
+</footer>
+	</body>
+</html>

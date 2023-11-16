@@ -32,7 +32,7 @@ def remove_from_basket(item):
                 basket.remove(item_dict)
             break
     total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
-    return render_template('index.html', basket=basket, total_price=total_price)
+    return render_template('cart.html', basket=basket, total_price=total_price)
 
 
 @app.route('/fresh', endpoint='fresh')
