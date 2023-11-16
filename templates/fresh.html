@@ -29,7 +29,7 @@
 			<img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple">
 			<strong>Apple</strong>
 			<span>£0.50</span>
-			<form action="{{ url_for('add_to_basket', item='Apple', price=0.50) }}" method="POST">
+			<form action="{{ url_for('add_to_basket', item='Apple', price=0.50) }}" method="POST"> 
 				<button type="submit">Add to basket</button>
 			</form>
 		</div>
@@ -87,6 +87,7 @@
 		<div class="product-item">
 			<img src="{{ url_for('static', filename='img/tomato.png') }}" alt="Tomato">
 			<strong>Tomato</strong>
+			<span class="discounted-price">£0.80</span>
 			<span>£0.50</span>
 			<form action="{{ url_for('add_to_basket', item='Tomato', price=0.50) }}" method="POST">
 				<button type="submit">Add to basket</button>
@@ -102,9 +103,52 @@
 			</form>
 		</div>			
 			
-	</div>
-	
+	</div>	
 </section>
+
+	<section class="intro">
+	<div class="product-container">
+
+		<div class="product-item">
+			<img src="{{ url_for('static', filename='img/potato.png') }}" alt="Potatoes">
+			<strong>Potatoes</strong>
+			<span class="discounted-price">£3.00</span>
+			<span>£2.50</span>
+			<form action="{{ url_for('add_to_basket', item='Potatoes', price=2.50) }}" method="POST">
+				<button type="submit">Add to basket</button>
+			</form>
+			</div>
+
+		<div class="product-item">
+			<img src="{{ url_for('static', filename='img/lettuce.png') }}" alt="Lettuce">
+			<strong>Lettuce</strong>
+			<span>£1.00</span>
+			<form action="{{ url_for('add_to_basket', item='Lettuce', price=1.0) }}" method="POST">
+				<button type="submit">Add to basket</button>
+			</form>
+		</div>
+
+		<div class="product-item">
+			<img src="{{ url_for('static', filename='img/onion.png') }}" alt="Onion">
+			<strong>Onion</strong>
+			<span>£0.75</span>
+			<form action="{{ url_for('add_to_basket', item='Onion', price=0.75) }}" method="POST">
+				<button type="submit">Add to basket</button>
+			</form>
+		</div>
+
+		<div class="product-item">
+			<img src="{{ url_for('static', filename='img/melon.png') }}" alt="Watermelon">
+			<strong>Watermelon</strong>
+			<span>£2.50</span>
+			<form action="{{ url_for('add_to_basket', item='Watermelon', price=2.50) }}" method="POST">
+				<button type="submit">Add to basket</button>
+			</form>
+		</div>
+
+		</div>
+	</section>
+
 
 <footer>
 	<h4>Copyright © 2023 E-FeastFiesta All Rights Reserved.</h4>
