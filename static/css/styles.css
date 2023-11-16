@@ -55,6 +55,7 @@ section.intro {
 
 footer{
 	padding: 10px;
+	color: white;
 	text-align: center;
 	background: #006bb3;
 	margin-top: 10px;
@@ -144,7 +145,7 @@ form {
     }
 
 .product-item span {
-	    display: block;
+	    display: inline-block;
 	        margin: 5px 0;
 }
 
