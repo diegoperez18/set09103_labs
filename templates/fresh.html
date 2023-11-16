@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UFT-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>E-Commerce Web App</title>
+		<title>E-Commerce Web App / Fresh Food</title>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 	</head>
 	<body>
@@ -27,8 +28,8 @@
 		<div class="product-item">
 			<img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple">
 			<strong>Apple</strong>
-			<span>£1.00</span>
-			<form action="{{ url_for('add_to_basket', item='Apple', price=1.0) }}" method="POST">
+			<span>£0.50</span>
+			<form action="{{ url_for('add_to_basket', item='Apple', price=0.50) }}" method="POST">
 				<button type="submit">Add to basket</button>
 			</form>
 		</div>
@@ -45,14 +46,14 @@
 		<div class="product-item">
 			<img src="{{ url_for('static', filename='img/mango.png') }}" alt="Mango">
 			<strong>Mango</strong>
-			<span>£1.00</span>
-			<form action="{{ url_for('add_to_basket', item='Mango', price=1.0) }}" method="POST">
+			<span>£0.75</span>
+			<form action="{{ url_for('add_to_basket', item='Mango', price=0.75) }}" method="POST">
 				<button type="submit">Add to basket</button>
 			</form>
 		</div>
 		
 		<div class="product-item">
-			<img src="{{ url_for('static', filename='img/bread.png') }}" alt="Bread">
+			<img src="{{ url_for('static', filename='img/bread.png') }}" onmouseover="displayBreadtwo(this)" onmouseout="displayBread(this)">
 			<strong>Bread</strong>
 			<span class="discounted-price">£2.00</span>
 				<span>£1.00</span>
@@ -68,8 +69,8 @@
 		<div class="product-item">
 			<img src="{{ url_for('static', filename='img/carrot.png') }}" alt="Carrot">
 			<strong>Carrots</strong>
-			<span>£1.00</span>
-			<form action="{{ url_for('add_to_basket', item='Carrots', price=1.0) }}" method="POST">
+			<span>£0.50</span>
+			<form action="{{ url_for('add_to_basket', item='Carrots', price=0.50) }}" method="POST">
 				<button type="submit">Add to basket</button>
 			</form>
 		</div>
@@ -77,8 +78,8 @@
 		<div class="product-item">
 			<img src="{{ url_for('static', filename='img/cherry.png') }}" alt="Cherry">
 			<strong>Cherries</strong>
-			<span>£1.00</span>
-			<form action="{{ url_for('add_to_basket', item='Cherries', price=1.0) }}" method="POST">
+			<span>£0.75</span>
+			<form action="{{ url_for('add_to_basket', item='Cherries', price=0.75) }}" method="POST">
 				<button type="submit">Add to basket</button>
 			</form>
 		</div>
@@ -86,8 +87,8 @@
 		<div class="product-item">
 			<img src="{{ url_for('static', filename='img/tomato.png') }}" alt="Tomato">
 			<strong>Tomato</strong>
-			<span>£1.00</span>
-			<form action="{{ url_for('add_to_basket', item='Tomato', price=1.0) }}" method="POST">
+			<span>£0.50</span>
+			<form action="{{ url_for('add_to_basket', item='Tomato', price=0.50) }}" method="POST">
 				<button type="submit">Add to basket</button>
 			</form>
 		</div>

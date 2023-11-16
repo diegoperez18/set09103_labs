@@ -47,8 +47,8 @@
 	<div class="product-item">
 		<img src="{{ url_for('static', filename='img/sugar.png') }}" onmouseover="displaySugars(this)" onmouseout="displaySugar(this)">
 	<strong>Sugar</strong>
-	<span>£1.00</span>
-	<form action="{{ url_for('add_to_basket', item='Sugar', price=1.0) }}" method="POST">
+	<span>£2.00</span>
+	<form action="{{ url_for('add_to_basket', item='Sugar', price=2.0) }}" method="POST">
 		<button type="submit">Add to basket</button>
 	</form>
      </div>
@@ -57,8 +57,8 @@
 	<div class="product-item">
 		<img src="{{ url_for('static', filename='img/apple.png') }}" alt="Apple">
 	    <strong>Apple</strong>
-	    <span>£1.00</span>
-	    <form action="{{ url_for('add_to_basket', item='Apple', price=1.0) }}" method="POST">
+	    <span>£0.50</span>
+	    <form action="{{ url_for('add_to_basket', item='Apple', price=0.50) }}" method="POST">
 	            <button type="submit">Add to basket</button>
 		</form>
 	</div>
@@ -66,14 +66,14 @@
 	<div class="product-item">
 		<img src="{{ url_for('static', filename='img/mango.png') }}" alt="Mango">
 		<strong>Mango</strong>
-		<span>£1.00</span>
-		<form action="{{ url_for('add_to_basket', item='Mango', price=1.0) }}" method="POST">
+		<span>£0.75</span>
+		<form action="{{ url_for('add_to_basket', item='Mango', price=0.75) }}" method="POST">
 			<button type="submit">Add to basket</button>
 		</form>
 	</div>  
 
      <div class="product-item">
-	     <img src="{{ url_for('static', filename='img/bread.png') }}" alt="Bread">
+	     <img src="{{ url_for('static', filename='img/bread.png') }}" onmouseover="displayBreadtwo(this)" onmouseout="displayBread(this)"> 
 	<strong>Bread</strong>
         <span class="discounted-price">£2.00</span>
 	<span>£1.00</span>
