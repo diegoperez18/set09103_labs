@@ -4,6 +4,7 @@
 		<meta charset="UFT-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>E-Commerce Web App</title>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -44,7 +45,7 @@
 <div class="product-container">
 	
 	<div class="product-item">
-		<img src="{{ url_for('static', filename='img/sugar.png') }}" alt="Sugar">
+		<img src="{{ url_for('static', filename='img/sugar.png') }}" onmouseover="displaySugars(this)" onmouseout="displaySugar(this)">
 	<strong>Sugar</strong>
 	<span>1.00£</span>
 	<form action="{{ url_for('add_to_basket', item='Sugar', price=1.0) }}" method="POST">
