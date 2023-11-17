@@ -51,6 +51,10 @@ section.intro {
 	height: auto;
 }
 
+#asterik {
+	font-size: 12px;
+}
+
 footer{
 	padding: 10px;
 	color: white;
