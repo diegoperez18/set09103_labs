@@ -46,11 +46,9 @@ section.intro {
 	border-radius: 10px;
 }
 
-#title {
-	font-size: 46px;
-	color: black;
-	font-family: times new roman;
-	text-align: center;
+.logo {
+	width: 160px;
+	height: auto;
 }
 
 footer{
