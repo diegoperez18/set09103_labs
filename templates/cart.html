@@ -2,7 +2,7 @@
 <html lang="en">
 		<head>
 			<meta charset="UTF-8">
-			<meta name="viewport" content="width">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>E-Commerce Web App / Cart</title>
 			<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
@@ -22,17 +22,16 @@
 <ul id="basket-list">
 	<h2 class="basket-heading">Shopping Basket</h2>
 	{% for item_dict in basket %}
-<li>
-	<span class="item-quantity">x{{ item_dict['quantity'] }}</span>
-	<span class="item-name">{{ item_dict['item'] }}</span>
-	<form action="{{ url_for('remove_from_basket', item=item_dict['item']) }}" method="POST">
-		<button class="remove-button" type="submit">Remove</button>
+	<li>
+		<span class="item-quantity">x{{ item_dict['quantity'] }}</span>
+		<span class="item-name">{{ item_dict['item'] }}</span>
+		<form action="{{ url_for('remove_from_basket', item=item_dict['item']) }}" method="POST">
+		   <button class="remove-button" type="submit">Remove</button>
 
-	</form>
-</li>
-
+		</form>
+	</li>
 	{% endfor %}
-	<li id ="total"><strong>Total:</strong> £{{ total_price }}</li>
+   <li id ="total"><strong>Total:</strong> £{{ total_price }}</li>
 </ul>
 
 
