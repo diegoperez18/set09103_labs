@@ -7,7 +7,9 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-	<h1 id="title">E-FeastFiesta </h1>
+	<div>
+		<img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+	</div>
 <nav>
 	<ul>
 		<li><a href="{{ url_for('root') }}">Home</a></li>
