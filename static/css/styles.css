@@ -2,7 +2,7 @@ body {
 	font-family: Arial, sans-serif;
 	background-color: #ffe6ff;
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 1500px;
 	padding: 20px;
 }
 
@@ -39,7 +39,7 @@ nav li a:hover {
 }
 
 section.intro {
-	max-width: 1600px;
+	max-width: 1500px;
 	margin: 20px auto;
 	padding: 20px;
 	background-color: #e0e0eb;
@@ -89,14 +89,27 @@ form {
 }
 
 #basket-list {
-	max-width: 400px;
-	margin: 20px auto;
-	padding: 10px;
+	max-width: 800px;
+	padding: 50px;
 	background-color: #e0e0eb;
 	border-radius: 10px;
 	text-align: center;
 
 }
+
+#rico {
+	 max-width: 1030px;
+	 margin: 20px 30px;
+	 padding: 50px;
+	 background-color: #e0e0eb;
+	 border-radius: 10px;
+}
+
+#basket-list, #rico {
+	display: inline-block;
+	vertical-align: top;
+}
+
 
 .basket-heading {
 	color: black;
