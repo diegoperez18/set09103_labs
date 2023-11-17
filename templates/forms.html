@@ -13,7 +13,7 @@
 	<nav>
 		<ul>
 			<li><a href="{{ url_for('root') }}">Home</a></li>
-			<li><a href="{{ url_}}">Fresh Food</a></li>
+			<li><a href="{{ url_for('fresh') }}">Fresh Food</a></li>
 			<li><a href="{{ url_for('delivery') }}">Delivery</a></li>
 			<li><a href="{{ url_for('cart') }}">Cart</a></li>
 		</ul>
@@ -34,16 +34,16 @@
 			<input type="text" id="address" name="address" placeholder="Please enter your address" required>
 				<label for="email">Phone number <span style="color:red; font-size: 18px;">*</span> <span style=" font-size: 13px;">(the phone number must contain 11 digits)</span> </label>
 			<input type="tel" id="phonenumber" name="phonenumber" pattern="[0-9]{11}" placeholder="Please enter your phone number" required>
-			<label for="subject">Membership Level <span style="color:red; font-size: 18px;">*</span></label>
-			<select id="subject" name="subject" required>
+			<label for="membershipLevel">Membership Level <span style="color:red; font-size: 18px;">*</span></label>
+			<select id="membershipLevel" name="membershipLevel" required>
 				<option value="Bronze">Bronze</option>
 				<option value="Silver">Silver</option>
 				<option value="Gold">Gold</option>
 			</select>
 
 
-			<label for="message">Message</label></label>
-			<textarea id="message" name="message" placeholder="Have a question or comment? We're here to help! Feel free to share your thoughts, inquiries, or anything else you'd like us to know. Your feedback is important to us. Our team will answer soon as possible. " style="height:210px"></textarea>
+			<label for="userFeedback">Your feedback</label></label>
+			<textarea id="userFeedback" name="userFeedback" placeholder="Have a question or comment? We're here to help! Feel free to share your thoughts, inquiries, or anything else you'd like us to know. Your feedback is important to us. Our team will answer soon as possible. " style="height:210px"></textarea>
 			<input type="submit" value="Submit" >
 			<br><BR><BR>
 		 </form>
