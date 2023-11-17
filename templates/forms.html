@@ -20,8 +20,35 @@
 	</nav>
 
 	<section class="intro">
-		<h2> Welcome forms membership</h2>
-		<p>The information provided on this website does not</p>
+		<h2> Welcome to our Membership Form</h2>
+		<p>We are delighted to have you on board, ready to experience a world of incredible benefits crafted just for you. Take a moment to
+		complete the following form, and open the door to a multitude of perks that await you. Your journey with us is
+		about to become even more exciting – let's get started!</p>
+	 <div>
+		 <form>
+			 <label for="fullname">Full Name <span style="color:red; font-size: 18px;">*</span></label>
+			 <input type="text" id="fullname" name="fullname" placeholder="Please enter your full name" required>
+			 <label for="email">Email</label>
+			 <input type="text" id="email" name="email" placeholder=" Please enter your email address">
+			 	<label for="email">Address <span style="color:red; font-size: 18px;">*</span></label>
+			<input type="text" id="address" name="address" placeholder="Please enter your address" required>
+				<label for="email">Phone number <span style="color:red; font-size: 18px;">*</span> <span style=" font-size: 13px;">(the phone number must contain 11 digits)</span> </label>
+			<input type="tel" id="phonenumber" name="phonenumber" pattern="[0-9]{11}" placeholder="Please enter your phone number" required>
+			<label for="subject">Membership Level <span style="color:red; font-size: 18px;">*</span></label>
+			<select id="subject" name="subject" required>
+				<option value="Bronze">Bronze</option>
+				<option value="Silver">Silver</option>
+				<option value="Gold">Gold</option>
+			</select>
+
+
+			<label for="message">Message</label></label>
+			<textarea id="message" name="message" placeholder="Have a question or comment? We're here to help! Feel free to share your thoughts, inquiries, or anything else you'd like us to know. Your feedback is important to us. Our team will answer soon as possible. " style="height:210px"></textarea>
+			<input type="submit" value="Submit" >
+			<br><BR><BR>
+		 </form>
+	 </div>
+
 	</section>
 
 	<footer>
