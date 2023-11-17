@@ -47,6 +47,12 @@ def delivery():
 
    return render_template('delivery.html')
 
+@app.route('/forms', endpoint='forms')
+def forms():
+
+    return render_template('forms.html')
+
+
 @app.route('/cart', endpoint='cart')
 def cart():
 
