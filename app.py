@@ -17,7 +17,7 @@ def add_to_basket(item, price):
     for item_dict in basket:
         if item_dict['item'] == item:
             item_dict['quantity'] += 1
-            item_dict['total_price'] = item_dict['price'] * item_dict['quantity']
+            item_dict['total_price'] = float(item_dict['price']) * item_dict['quantity']
             break
     else:
         basket.append({'item': item, 'price': float(price), 'quantity': 1, 'total_price': float(price)})
@@ -30,7 +30,7 @@ def remove_from_basket(item):
         if item_dict['item'] == item:
             if item_dict['quantity'] > 1:
                 item_dict['quantity'] -= 1
-                item_dict['total_price'] = item_dict['price'] * item_dict['quantity']
+                item_dict['total_price'] = float(item_dict['price']) * item_dict['quantity']
             else:
                 basket.remove(item_dict)
             break
