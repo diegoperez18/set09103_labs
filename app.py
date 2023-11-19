@@ -3,7 +3,9 @@ from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__)
 
 basket = []
-total_price = 0
+
+def calculate_total_price():
+    return sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
 
 @app.route('/')
 def root():
@@ -19,7 +21,7 @@ def add_to_basket(item, price):
             break
     else:
         basket.append({'item': item, 'price': float(price), 'quantity': 1, 'total_price': float(price)})
-    total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
+    total_price = calculate_total_price()
     return render_template('fresh.html', basket=basket, total_price=total_price)
 
 @app.route('/remove_from_basket/<item>', methods=['POST'], endpoint='remove_from_basket')
@@ -33,7 +35,7 @@ def remove_from_basket(item):
                 basket.remove(item_dict)
             break
 
-    total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
+    total_price = calculate_total_price()
     return render_template('cart.html', basket=basket, total_price=total_price)
 
 
@@ -61,7 +63,7 @@ def submit_membership():
 @app.route('/cart', endpoint='cart')
 def cart():
 
-    total_price = sum([item_dict['price'] * item_dict['quantity'] for item_dict in basket])
+    total_price = calculate_total_price()
     return render_template('cart.html', basket=basket, total_price=total_price)
 
 
