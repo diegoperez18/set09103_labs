@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
@@ -7,8 +7,8 @@ total_price = 0
 
 @app.route('/')
 def root():
-    total_price = sum([item['price'] * item['quantity'] for item in basket])
-    return render_template('index.html', basket=basket, total_price=total_price)
+    
+    return render_template('index.html')
 
 @app.route('/add_to_basket/<item>/<float:price>', methods=['POST'])
 def add_to_basket(item, price):
@@ -51,6 +51,11 @@ def delivery():
 def forms():
 
     return render_template('forms.html')
+
+@app.route('/submit_membership', methods=['POST'])
+def submit_membership():
+
+    return redirect(url_for('cart'))
 
 
 @app.route('/cart', endpoint='cart')

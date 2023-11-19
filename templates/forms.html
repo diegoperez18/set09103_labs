@@ -25,7 +25,8 @@
 		complete the following form, and open the door to a multitude of perks that await you. Your journey with us is
 		about to become even more exciting – let's get started!</p>
 	 <div>
-		 <form>
+		 <form method="POST" action="{{ url_for('submit_membership') }}">
+
 			 <label for="fullname">Full Name <span style="color:red; font-size: 18px;">*</span></label>
 			 <input type="text" id="fullname" name="fullname" placeholder="Please enter your full name" required>
 			 <label for="email">Email</label>
